@@ -100,7 +100,7 @@ export class MemberResolver {
 
 	/** UPLOADER **/
 	@UseGuards(AuthGuard)
-	@Mutation((returns) => String)
+	@Mutation(() => String)
 	public async imageUploader(
 		@Args({ name: 'file', type: () => GraphQLUpload })
 		{ createReadStream, filename, mimetype }: FileUpload,
@@ -128,7 +128,7 @@ export class MemberResolver {
 	}
 
 	@UseGuards(AuthGuard)
-	@Mutation((returns) => [String])
+	@Mutation(() => [String])
 	public async imagesUploader(
 		@Args('files', { type: () => [GraphQLUpload] })
 		files: Promise<FileUpload>[],
