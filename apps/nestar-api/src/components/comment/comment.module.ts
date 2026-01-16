@@ -7,6 +7,7 @@ import { AuthModule } from '../auth/auth.module';
 import { MemberModule } from '../member/member.module';
 import { PropertyModule } from '../property/property.module';
 import { BoardArticleModule } from '../board-article/board-article.module';
+import { ViewModule } from '../view/view.module';
 
 @Module({
 	imports: [
@@ -15,6 +16,7 @@ import { BoardArticleModule } from '../board-article/board-article.module';
 		MemberModule,
 		PropertyModule,
 		BoardArticleModule,
+		ViewModule,
 	],
 	providers: [CommentResolver, CommentService],
 })
